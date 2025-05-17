@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Recycle_View</string>
+    <string name="name">Nama Pahlawan</string>
+    <string name="desk">Deskripsi Pahlawan</string>
+</resources>
