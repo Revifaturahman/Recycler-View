@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DetailActivity"
+        android:padding="20sp">
+
+        <ImageView
+            android:id="@+id/heroImg"
+            android:layout_width="match_parent"
+            android:layout_height="250sp"
+            android:src="@drawable/bung_tomo"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/heroName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heroImg"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/heroDesc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/desk"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/heroName"
+            android:layout_marginTop="10dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

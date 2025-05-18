@@ -1,5 +1,6 @@
 package com.example.recycle_view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -45,8 +46,20 @@ class MainActivity : AppCompatActivity() {
             showSelectedHero(data)
         }
 
+        listHeroAdapter.setOnItemClickCallback(object : ListHeroAdapter.OnItemClickCallback{
+            override fun onItemClicked(data: Hero) {
+                showSelectedHero(data)
+            }
+        })
+
         rv_heroes.layoutManager = LinearLayoutManager(this)
         rv_heroes.adapter = listHeroAdapter
         rv_heroes.setHasFixedSize(true)
+    }
+
+    private fun showSelectedHero(hero: Hero){
+        val intent = Intent(this, DetailActivity::class.java)
+        intent.putExtra("OBJECT_HERO", hero)
+        startActivity(intent)
     }
 }
