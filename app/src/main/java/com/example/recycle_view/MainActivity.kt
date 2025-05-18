@@ -13,6 +13,10 @@ import com.example.recycle_view.Adapter.ListHeroAdapter
 import com.example.recycle_view.Model.Hero
 
 class MainActivity : AppCompatActivity() {
+//    Tanggal Pengerjaan: 18-05-2025
+//    Nim: 10122001
+//    Nama: Revi Faturahman
+//    Kelas: PA-3
     private lateinit var rv_heroes: RecyclerView
     private var list = ArrayList<Hero>()
 
